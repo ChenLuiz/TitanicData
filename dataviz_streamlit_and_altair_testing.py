@@ -11,7 +11,7 @@ st.set_page_config(page_title = "Titanic Data", layout="wide", initial_sidebar_s
 col1, col2, col3 = st.columns(3)
 
 with col1:
-# Chart 1 Histogram of Age
+  # Chart 1 Histogram of Age
   Hist_Age = alt.Chart(data).mark_bar().encode(
       alt.X("Age:Q", bin = True),
       y = 'count()'
@@ -23,7 +23,7 @@ with col2:
   # Chart 2 scatter plot of Age and Fare
   Scatter = alt.Chart(data).mark_circle().encode(
       x = 'Fare',
-      y= 'Age',
+      y = 'Age',
       color = 'Survived',
       tootip = ['Age', 'Fare', 'Survived', 'Name']
   ).interactive()
